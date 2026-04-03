@@ -87,7 +87,16 @@ const id = parseInt(req.params.id, 10);
 const user = userService.getUser(id);
 
 ```
+if (user) {
+    userService.removeUser(id);
 
+    logger.info(`Removing user ID ${id}`);
+
+    return res.status(StatusCodes.OK).json({
+        status: STATUS.success,
+        message: `User ${id} has been deleted.`,
+    });
+}
 
 
 
