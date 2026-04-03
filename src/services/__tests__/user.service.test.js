@@ -15,6 +15,12 @@ test.beforeEach(() => {
 });
 
 
+test.after(() => {
+    if (userService.getUser(2)) {
+        console.info('Cleanup: User 2 is being removed.')
+        userService.removeUser(2);
+    }
+})
 
 
 
