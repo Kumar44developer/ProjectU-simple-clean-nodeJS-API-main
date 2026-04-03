@@ -9,7 +9,13 @@ success: true,
 failure: false
 };
 
+const getAllUsers = (req, res) => {
+const users = userService.getAllUsers();
 
+```
+if (users && users.length) {
+    return res.status(StatusCodes.OK).json(users);
+}
 
 
 
