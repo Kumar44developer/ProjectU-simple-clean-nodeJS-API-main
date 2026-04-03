@@ -99,6 +99,11 @@ if (user) {
 }
 
 
+return res.status(StatusCodes.NOT_FOUND).json({
+    status: STATUS.failure,
+    message: `User ${id} hasn't been found.`,
+});
+```
 
 
 
