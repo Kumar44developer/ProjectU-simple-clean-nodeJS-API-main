@@ -6,6 +6,10 @@ return users.find((user) => user.id === userId);
 };
 
 
+// Get all users
+const getAll = () => {
+return users;
+};
 
 
 
