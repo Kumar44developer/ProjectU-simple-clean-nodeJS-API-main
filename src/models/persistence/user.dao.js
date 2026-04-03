@@ -39,7 +39,13 @@ id: users.length + 1,
 ...details
 };
 
+```
+users.push(newUser);
 
+return newUser;
+```
+
+};
 
 
 
