@@ -58,7 +58,12 @@ return res.status(StatusCodes.CREATED).json({
 ```
 
 };
+// Update user
+const updateUser = (req, res) => {
+const user = req.body;
+const id = parseInt(req.params.id, 10);
 
+```
 
 
 
