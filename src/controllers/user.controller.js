@@ -43,7 +43,12 @@ return res.status(StatusCodes.NOT_FOUND).json({
 
 };
 
+// Add user
+const addUser = (req, res) => {
+const user = req.body;
+const addedUser = userService.addUser(user);
 
+```
 
 
 
