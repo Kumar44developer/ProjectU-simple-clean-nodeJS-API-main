@@ -64,7 +64,15 @@ const user = req.body;
 const id = parseInt(req.params.id, 10);
 
 ```
+const updatedUser = userService.updateUser(id, user);
 
+if (updatedUser) {
+    logger.info(`Updating user ID ${id}`);
+    return res.status(StatusCodes.OK).json({
+        status: STATUS.success,
+        user: updatedUser,
+    });
+}
 
 
 
