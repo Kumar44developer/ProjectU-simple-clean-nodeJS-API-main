@@ -74,7 +74,11 @@ if (updatedUser) {
     });
 }
 
-
+return res.status(StatusCodes.NOT_FOUND).json({
+    status: STATUS.failure,
+    message: `User ${id} is not found.`,
+});
+```
 
 
 
