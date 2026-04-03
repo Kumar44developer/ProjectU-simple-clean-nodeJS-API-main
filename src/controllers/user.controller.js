@@ -30,7 +30,18 @@ const id = parseInt(req.params.id, 10);
 const user = userService.getUser(id);
 
 ```
+if (user) {
+    logger.info(`Retrieving user ID ${id}`);
+    return res.status(StatusCodes.OK).json(user);
+}
 
+return res.status(StatusCodes.NOT_FOUND).json({
+    status: STATUS.failure,
+    message: `User ${id} is not found.`,
+});
+```
+
+};
 
 
 
