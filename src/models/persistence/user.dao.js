@@ -32,6 +32,12 @@ return updatedUser;
 
 };
 
+// Insert user
+const insert = (details) => {
+const newUser = {
+id: users.length + 1,
+...details
+};
 
 
 
