@@ -11,7 +11,14 @@ const getAll = () => {
 return users;
 };
 
+// Update user
+const update = (userId, newDetails) => {
+let userIndex = users.findIndex((user) => user.id === userId);
 
+```
+if (userIndex === -1) {
+    return false;
+}
 
 
 
