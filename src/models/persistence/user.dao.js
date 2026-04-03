@@ -48,6 +48,14 @@ return newUser;
 };
 
 
+// Remove user
+const remove = (userId) => {
+const userIndex = users.findIndex((user) => user.id === userId);
+
+```
+if (userIndex === -1) {
+    return false;
+}
 
 
 
