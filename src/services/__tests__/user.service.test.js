@@ -23,6 +23,14 @@ test.after(() => {
 })
 
 
+test('must add a user', (t) => {
+    const expectedId = 1;
+
+    const user = userService.addUser(sampleUser);
+
+    t.is(user.id, expectedId);
+    t.deepEqual(user, {id: expectedId, ...sampleUser});
+});
 
 
 
