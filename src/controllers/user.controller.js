@@ -104,7 +104,15 @@ return res.status(StatusCodes.NOT_FOUND).json({
     message: `User ${id} hasn't been found.`,
 });
 ```
+};
 
+export default {
+getAllUsers,
+getUser,
+addUser,
+updateUser,
+removeUser
+};
 
 
 
