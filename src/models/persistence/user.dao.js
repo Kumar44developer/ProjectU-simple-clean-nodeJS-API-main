@@ -20,7 +20,10 @@ if (userIndex === -1) {
     return false;
 }
 
-
+const updatedUser = {
+    ...users[userIndex],
+    ...newDetails
+};
 
 
 
