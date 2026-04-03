@@ -22,7 +22,14 @@ return res.status(StatusCodes.NOT_FOUND).json({
     message: 'No users found.',
 });
 ```
+};
 
+// Get single user
+const getUser = (req, res) => {
+const id = parseInt(req.params.id, 10);
+const user = userService.getUser(id);
+
+```
 
 
 
