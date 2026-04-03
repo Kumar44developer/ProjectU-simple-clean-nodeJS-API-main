@@ -67,6 +67,14 @@ return deletedUser;
 };
 
 
+export default {
+get,
+getAll,
+update,
+insert,
+remove,
+};
+
 
 
 
