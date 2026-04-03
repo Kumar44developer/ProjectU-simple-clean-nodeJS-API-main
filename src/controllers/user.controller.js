@@ -79,7 +79,14 @@ return res.status(StatusCodes.NOT_FOUND).json({
     message: `User ${id} is not found.`,
 });
 ```
+};
 
+// Delete user
+const removeUser = (req, res) => {
+const id = parseInt(req.params.id, 10);
+const user = userService.getUser(id);
+
+```
 
 
 
