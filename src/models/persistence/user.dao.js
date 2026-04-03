@@ -25,7 +25,12 @@ const updatedUser = {
     ...newDetails
 };
 
+users.splice(userIndex, 1, updatedUser);
 
+return updatedUser;
+```
+
+};
 
 
 
