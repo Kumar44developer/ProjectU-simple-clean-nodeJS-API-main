@@ -49,7 +49,15 @@ const user = req.body;
 const addedUser = userService.addUser(user);
 
 ```
+logger.info('Creating a user');
 
+return res.status(StatusCodes.CREATED).json({
+    status: STATUS.success,
+    user: addedUser,
+});
+```
+
+};
 
 
 
