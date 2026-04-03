@@ -58,6 +58,13 @@ if (userIndex === -1) {
 }
 
 
+const deletedUser = users[userIndex];
+users.splice(userIndex, 1);
+
+return deletedUser;
+```
+
+};
 
 
 
