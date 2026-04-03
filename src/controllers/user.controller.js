@@ -17,6 +17,11 @@ if (users && users.length) {
     return res.status(StatusCodes.OK).json(users);
 }
 
+return res.status(StatusCodes.NOT_FOUND).json({
+    status: STATUS.failure,
+    message: 'No users found.',
+});
+```
 
 
 
