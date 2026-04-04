@@ -40,7 +40,11 @@ app.use('/v1', rateLimiter);
 app.use('/v1', mainRoutes);
 app.use('/v1/user', userRoutes);
 
-
+app.use((req, res) => {
+res.status(404).json({
+message: "Route not found"
+});
+});
 
 
 
