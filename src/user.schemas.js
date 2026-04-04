@@ -60,6 +60,9 @@ export const updateUser = {
 };
 
 
+export const removeUser = {
+    schema: {
+        params: {
 
 
 
