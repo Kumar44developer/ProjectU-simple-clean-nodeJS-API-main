@@ -37,7 +37,8 @@ res.status(200).send('API is running 🚀');
 
 app.use('/v1', rateLimiter);
 
-
+app.use('/v1', mainRoutes);
+app.use('/v1/user', userRoutes);
 
 
 
