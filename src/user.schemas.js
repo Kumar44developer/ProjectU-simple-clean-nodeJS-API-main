@@ -15,6 +15,15 @@ const MAX_LENGTH = {
 };
 
 
+export const getUser = {
+    schema: {
+        params: {
+            yupSchema: yup.object().shape({
+                id: yup.number().required(),
+            })
+        },
+    },
+};
 
 
 
