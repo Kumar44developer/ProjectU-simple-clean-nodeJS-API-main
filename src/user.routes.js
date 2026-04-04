@@ -9,7 +9,13 @@ const router = express.Router();
 
 router.get('/all', userController.getAllUsers);
 
-
+router.get(
+    '/:id',
+    expressYupMiddleware({
+        schemaValidator: getUser
+    }),
+    userController.getUser
+);
 
 
 
