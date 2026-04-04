@@ -17,7 +17,13 @@ router.get(
     userController.getUser
 );
 
-
+router.post(
+    '/',
+    expressYupMiddleware({
+        schemaValidator: addUser
+    }),
+    userController.addUser
+);
 
 
 
