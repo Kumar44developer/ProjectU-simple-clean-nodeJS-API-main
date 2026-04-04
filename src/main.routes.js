@@ -8,6 +8,7 @@ router.get('/ping', (req, res) => {
 res.status(StatusCodes.OK).send('OK');
 });
 
+export default router;
 
 
 
