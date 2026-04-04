@@ -41,7 +41,13 @@ export const addUser = {
 };
 
 
-
+export const updateUser = {
+    schema: {
+        params: {
+            yupSchema: yup.object().shape({
+                id: yup.number().required(),
+            })
+        },
 
 
 
