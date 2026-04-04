@@ -48,7 +48,10 @@ export const updateUser = {
                 id: yup.number().required(),
             })
         },
-
+        body: {
+            yupSchema: yup.object().shape({
+                name: yup.string().min(MIN_LENGTH.name).max(MAX_LENGTH.name),
+                email: yup.string().email(),
 
 
 
