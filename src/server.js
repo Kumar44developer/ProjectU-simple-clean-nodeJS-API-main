@@ -13,7 +13,14 @@ const port = process.env.PORT || 4000;
 
 app.set('trust proxy', 1);
 
-
+const rateLimiter = rateLimit({
+windowMs: 60 * 1000,
+max: 100,
+message: {
+status: 429,
+message: "Too many requests, please try again later."
+}
+});
 
 
 
