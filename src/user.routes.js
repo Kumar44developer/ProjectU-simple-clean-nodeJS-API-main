@@ -31,7 +31,13 @@ router.put(
     userController.updateUser
 );
 
+router.delete(
+    '/:id',
+    expressYupMiddleware({ schemaValidator: removeUser }),
+    userController.removeUser
+);
 
+export default router;
 
 
 
