@@ -7,6 +7,12 @@ const MIN_LENGTH = {
 };
 
 
+const MAX_LENGTH = {
+    name: 20,
+    city: 30,
+    country: 30,
+    email: 100
+};
 
 
 
