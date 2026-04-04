@@ -31,7 +31,9 @@ origin: process.env.FRONTEND_URL || "*",
 credentials: true
 }));
 
-
+app.get('/', (req, res) => {
+res.status(200).send('API is running 🚀');
+});
 
 
 
