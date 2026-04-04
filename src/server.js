@@ -35,6 +35,7 @@ app.get('/', (req, res) => {
 res.status(200).send('API is running 🚀');
 });
 
+app.use('/v1', rateLimiter);
 
 
 
