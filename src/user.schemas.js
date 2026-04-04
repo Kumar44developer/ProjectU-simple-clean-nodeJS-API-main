@@ -27,6 +27,12 @@ export const getUser = {
 
 
 
+export const addUser = {
+    schema: {
+        body: {
+            yupSchema: yup.object().shape({
+                name: yup.string().min(MIN_LENGTH.name).max(MAX_LENGTH.name),
+                email: yup.string().email().max(MAX_LENGTH.email),
 
 
 
