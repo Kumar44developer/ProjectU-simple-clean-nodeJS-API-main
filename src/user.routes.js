@@ -25,7 +25,11 @@ router.post(
     userController.addUser
 );
 
-
+router.put(
+    '/:id',
+    expressYupMiddleware({ schemaValidator: updateUser }),
+    userController.updateUser
+);
 
 
 
