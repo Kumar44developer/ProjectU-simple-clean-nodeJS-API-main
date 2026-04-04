@@ -52,7 +52,12 @@ export const updateUser = {
             yupSchema: yup.object().shape({
                 name: yup.string().min(MIN_LENGTH.name).max(MAX_LENGTH.name),
                 email: yup.string().email(),
-
+                city: yup.string().min(MIN_LENGTH.city).max(MAX_LENGTH.city),
+                country: yup.string().min(MIN_LENGTH.country).max(MAX_LENGTH.country),
+            })
+        },
+    },
+};
 
 
 
