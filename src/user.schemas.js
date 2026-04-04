@@ -63,7 +63,12 @@ export const updateUser = {
 export const removeUser = {
     schema: {
         params: {
-
+            yupSchema: yup.object().shape({
+                id: yup.number().required(),
+            })
+        },
+    },
+};
 
 
 
