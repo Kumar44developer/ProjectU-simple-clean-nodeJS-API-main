@@ -22,7 +22,9 @@ message: "Too many requests, please try again later."
 }
 });
 
-
+app.use(compression());
+app.use(express.json());
+app.use(helmet());
 
 
 
