@@ -9,3 +9,30 @@ FROM node:${NODE_VERSION}-${BASE_IMAGE}
 
 RUN mkdir -p /api
 WORKDIR /api
+
+
+COPY package.json /api/package.json
+RUN npm install
+COPY . /api
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
