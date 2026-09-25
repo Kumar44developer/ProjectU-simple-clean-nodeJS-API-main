@@ -2,94 +2,62 @@ import users from '../data/users.data.js';
 
 // Get single user
 const get = (userId) => {
-return users.find((user) => user.id === userId);
+    return users.find((user) => user.id === userId);
 };
-
 
 // Get all users
 const getAll = () => {
-return users;
+    return users;
 };
 
 // Update user
 const update = (userId, newDetails) => {
-let userIndex = users.findIndex((user) => user.id === userId);
+    const userIndex = users.findIndex((user) => user.id === userId);
 
-```
-if (userIndex === -1) {
-    return false;
-}
+    if (userIndex === -1) {
+        return false;
+    }
 
-const updatedUser = {
-    ...users[userIndex],
-    ...newDetails
-};
+    const updatedUser = {
+        ...users[userIndex],
+        ...newDetails
+    };
 
-users.splice(userIndex, 1, updatedUser);
+    users.splice(userIndex, 1, updatedUser);
 
-return updatedUser;
-```
-
+    return updatedUser;
 };
 
 // Insert user
 const insert = (details) => {
-const newUser = {
-id: users.length + 1,
-...details
+    const newUser = {
+        id: users.length + 1,
+        ...details
+    };
+
+    users.push(newUser);
+
+    return newUser;
 };
-
-```
-users.push(newUser);
-
-return newUser;
-```
-
-};
-
 
 // Remove user
 const remove = (userId) => {
-const userIndex = users.findIndex((user) => user.id === userId);
+    const userIndex = users.findIndex((user) => user.id === userId);
 
-```
-if (userIndex === -1) {
-    return false;
-}
+    if (userIndex === -1) {
+        return false;
+    }
 
+    const deletedUser = users[userIndex];
+    users.splice(userIndex, 1);
 
-const deletedUser = users[userIndex];
-users.splice(userIndex, 1);
-
-return deletedUser;
-```
-
+    return deletedUser;
 };
-
 
 export default {
-get,
-getAll,
-update,
-insert,
-remove,
+    get,
+    getAll,
+    update,
+    insert,
+    remove,
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
